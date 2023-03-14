@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { links } from "../links";
+import { Link, useOutletContext } from "react-router-dom";
+import { LinksType } from "../links";
 import BulbEnd from "./bulbEnd.svg";
 import BulbHead from "./BulbHead";
 import classes from "./Home.module.scss";
 
 export const Home: React.FC = () => {
   const [isOn, setIsOn] = useState(false);
+  const links = useOutletContext<LinksType>();
 
   return (
     <div className={classes.home}>
@@ -81,24 +82,31 @@ export const Home: React.FC = () => {
 
           <div className={classes.infoWrapper}>
             <div className={classes.contactWrapper}>
+              <h1>Contact info:</h1>
               <div className={classes.contact}>
                 <a
                   className={classes.contactLink}
                   href="https://github.com/nikaakin?tab=repositories"
                 >
                   <span className={classes.contactTitle}>
-                    Visit my Github: nikakain
+                    Visit my Github: nikaakin
                   </span>
                   <img src="/github.png" alt="Github link" />
                 </a>
               </div>
               <div className={classes.contact}>
+                <span
+                  className={classes.contactTitle}
+                  style={{ marginBlock: "3px", display: "block" }}
+                >
+                  Email: nikacuckiridze47@gmail.com
+                </span>
                 <a
                   className={classes.contactLink}
                   href="mailto:nikacuckiridze47@gmail.com"
                 >
                   <span className={classes.contactTitle}>
-                    Email: nikacuckiridze47@gmail.com
+                    Send Mail directly
                   </span>
                   <img src="/gmail.png" alt="Github link" />
                 </a>
@@ -133,6 +141,7 @@ export const Home: React.FC = () => {
             {links.map((link) => (
               <Link to={link.link} key={link.name} className={classes.link}>
                 {link.name}
+                <span className={classes.pop}>{link.description}</span>
               </Link>
             ))}
           </div>

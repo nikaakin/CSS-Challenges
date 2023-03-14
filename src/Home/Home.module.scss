@@ -12,7 +12,7 @@
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 200px;
 }
 
 .leftSide {
@@ -96,6 +96,7 @@
   &__tile {
     font-size: 18px;
     flex: 1;
+    cursor: pointer;
     color: #c5b27a;
     background-color: #fff4d3;
     width: 99%;
@@ -175,11 +176,16 @@
   outline: 2px solid #d0b57b;
   outline-offset: 3px;
   transition: all 0.3s;
+  position: relative;
 
   &:hover {
     color: #d0b57b;
     background-color: white;
     outline-color: white;
+
+    .pop {
+      display: block;
+    }
   }
 }
 
@@ -195,6 +201,10 @@
 }
 
 .contactTitle {
+  &:hover {
+    text-shadow: 1px 0px 10px #fefefe;
+    color: #fefefe;
+  }
 }
 
 .contactLink {
@@ -205,11 +215,23 @@
   align-items: center;
   transition: all 0.3s;
   gap: 10px;
+  cursor: pointer;
+}
 
-  &:hover {
-    text-shadow: 1px 0px 10px #fefefe;
-    color: #fefefe;
-  }
+.pop {
+  position: absolute;
+  font-size: 12px;
+  width: 150px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-15%, 110%);
+  background-color: white;
+  color: #1e1e1e;
+  padding: 5px 10px;
+  hyphens: auto;
+  border-radius: 3px;
+  display: none;
+  z-index: 10;
 }
 
 @keyframes bulb-drop {

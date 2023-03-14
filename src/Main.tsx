@@ -1,10 +1,11 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Outlet, useParams } from "react-router-dom";
+import { links } from "./links";
 
 export const Main: React.FC = () => {
   return (
     <main>
-      <Outlet />
+      <Outlet context={links} />
     </main>
   );
 };
