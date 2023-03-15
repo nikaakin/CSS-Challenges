@@ -93,6 +93,7 @@ export const Home: React.FC = () => {
                   </span>
                   <img src="/github.png" alt="Github link" />
                 </a>
+                <hr />
               </div>
               <div className={classes.contact}>
                 <span
@@ -101,6 +102,7 @@ export const Home: React.FC = () => {
                 >
                   Email: nikacuckiridze47@gmail.com
                 </span>
+                <hr />
                 <a
                   className={classes.contactLink}
                   href="mailto:nikacuckiridze47@gmail.com"
@@ -110,6 +112,7 @@ export const Home: React.FC = () => {
                   </span>
                   <img src="/gmail.png" alt="Github link" />
                 </a>
+                <hr />
               </div>
               <div className={classes.contact}>
                 <a
@@ -121,6 +124,7 @@ export const Home: React.FC = () => {
                   </span>
                   <img src="/linkedIn.png" alt="Github link" />
                 </a>
+                <hr />
               </div>
             </div>
 

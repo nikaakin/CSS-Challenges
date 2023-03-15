@@ -12,7 +12,7 @@ export const ProjectWrapper: React.FC = () => {
     description: "",
     element: <></>,
   });
-  const [isBarOn, setIsBarOn] = useState(true);
+  const [isBarOn, setIsBarOn] = useState(false);
   const [pageHeight, setPageHeight] = useState<number | null>(null);
   const { day } = useParams();
   const links = useOutletContext<LinksType>();
@@ -45,7 +45,7 @@ export const ProjectWrapper: React.FC = () => {
       <div className="content-wrapper">
         <div className="main">
           <div className="project-wrapper">{current.element}</div>
-          <div>
+          <div className="info-wrapper">
             <h2 className="title">Project Description: </h2>
             <div className="description"> {current.description}</div>
           </div>

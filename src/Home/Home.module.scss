@@ -67,7 +67,7 @@
 }
 
 .glow {
-  box-shadow: 0 100px 1000px 120px #ff8;
+  box-shadow: 0 100px 1000px 100px #ff8;
 }
 
 .tileWrapper {
@@ -248,5 +248,9 @@
   .mainContent {
     flex-direction: column;
     align-items: center;
+  }
+
+  .glow {
+    box-shadow: 0 100px 1000px 50px #ff8;
   }
 }
