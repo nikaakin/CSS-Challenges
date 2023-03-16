@@ -1,0 +1,167 @@
+.pyramid {
+  height: 100%;
+  width: 100%;
+  background: #272c34;
+  color: #fff;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  clip-path: circle(50%);
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: -27px;
+  width: 35px;
+  height: 35px;
+  background: #f1c40f;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transform-origin: 140px 50px;
+  animation: sun-move 4s ease-in-out infinite;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: #7ddffc;
+  //   		  background: #272C34;
+  animation: sky-move 4s ease-in-out infinite;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: #f0de75;
+  animation: ground 4s ease-in-out infinite;
+}
+
+.left {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  background-color: #ada1a1;
+  width: 100px;
+  height: 80px;
+  transform: translateY(-99%);
+  z-index: 11;
+  clip-path: polygon(0 100%, 65% 0, 100% 100%);
+  animation: left 4s ease-in-out infinite;
+}
+.right {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  transform: translateY(-99%);
+  z-index: 10;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  animation: left 4s ease-in-out infinite reverse;
+}
+
+.shadow {
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  animation: shadow 4s ease-in-out infinite;
+}
+
+@keyframes sun-move {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(50deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes sky-move {
+  0% {
+    background: #272c34;
+  }
+  33% {
+    background: #7ddffc;
+  }
+  66% {
+    background: #7ddffc;
+  }
+  100% {
+    background: #272c34;
+  }
+}
+
+@keyframes ground {
+  0% {
+    background: #272c34;
+  }
+
+  33% {
+    background: #f0de75;
+  }
+  73% {
+    background: #f0de75;
+  }
+  100% {
+    background: #272c34;
+  }
+}
+
+@keyframes left {
+  0% {
+    background: #272c34;
+  }
+
+  30% {
+    background: #f4f4f4;
+  }
+
+  70% {
+    background: #dddada;
+  }
+
+  100% {
+    background: #272c34;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    clip-path: polygon(32px 0, 178px 0, 300px 20px);
+  }
+  33% {
+    clip-path: polygon(32px 0, 178px 0, 300px 50px);
+  }
+  66% {
+    clip-path: polygon(32px 0, 178px 0, 100px 20px);
+  }
+  100% {
+    clip-path: polygon(32px 0, 178px 0, -300px 20px);
+  }
+}

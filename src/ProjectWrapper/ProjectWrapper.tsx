@@ -46,7 +46,7 @@ export const ProjectWrapper: React.FC = () => {
         <div className="main">
           <div className="project-wrapper">{current.element}</div>
           <div className="info-wrapper">
-            <h2 className="title">Project Description: </h2>
+            <h2 className="title">{current.name}: </h2>
             <div className="description"> {current.description}</div>
           </div>
         </div>
