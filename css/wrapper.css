@@ -27,16 +27,16 @@
   position: relative;
   z-index: 10001;
   border: transparent;
-  &:hover {
-    box-shadow: 0px 2px 100px #fefefe;
-  }
+}
+.burger:hover {
+  box-shadow: 0px 2px 100px #fefefe;
 }
 
 .change-burger {
   background-color: #1e1e1e;
-  &:hover {
-    box-shadow: 0px 2px 100px #1e1e1e;
-  }
+}
+.change-burger:hover {
+  box-shadow: 0px 2px 100px #1e1e1e;
 }
 
 .line {
@@ -49,49 +49,45 @@
   height: 2px;
   background-color: #1e1e1e;
   transition: all 0.3s;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -10px;
-    transform: translate(-50%, 0);
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #1e1e1e;
-    transition: all 0.3s;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    transform: translate(-50%, 0);
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #1e1e1e;
-    transition: all 0.3s;
-  }
+}
+.line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1e1e1e;
+  transition: all 0.3s;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1e1e1e;
+  transition: all 0.3s;
 }
 
 .rotate-line {
   background-color: transparent;
   transform: translate(-100%);
-
-  &::after {
-    background-color: white;
-    transform: rotate(135deg);
-    top: 50%;
-  }
-
-  &::before {
-    background-color: white;
-    transform: rotate(-135deg);
-    top: 50%;
-  }
+}
+.rotate-line::after {
+  background-color: white;
+  transform: rotate(135deg);
+  top: 50%;
+}
+.rotate-line::before {
+  background-color: white;
+  transform: rotate(-135deg);
+  top: 50%;
 }
 
 .content-wrapper {
@@ -168,56 +164,48 @@
   display: block;
   width: 80%;
   text-align: center;
-
-  &:last-child {
-    padding-bottom: 150px;
-  }
-
-  & > * {
-    padding-bottom: 15px;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    border-radius: 5px;
-    display: block;
-    text-decoration: none;
-    color: #f6f6f6;
-    font-size: 18px;
-    padding: 10px 0;
-    background-color: #555151;
-    outline-offset: 3px;
-    outline: 1px solid #555151;
-    transition: all 0.3s;
-    position: relative;
-
-    &:hover,
-    &:focus {
-      background-color: #1e1e1e;
-
-      span {
-        display: block;
-      }
-    }
-  }
-
-  span {
-    display: block;
-    position: absolute;
-    background-color: #f6f6f6;
-    color: #1e1e1e;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 107%);
-    display: none;
-    z-index: 100;
-    border: 1px solid #4d0b0b;
-    border-radius: 3px;
-    width: 100%;
-  }
+}
+.bar-ul:last-child {
+  padding-bottom: 150px;
+}
+.bar-ul > * {
+  padding-bottom: 15px;
+}
+.bar-ul li {
+  list-style: none;
+}
+.bar-ul a {
+  border-radius: 5px;
+  display: block;
+  text-decoration: none;
+  color: #f6f6f6;
+  font-size: 18px;
+  padding: 10px 0;
+  background-color: #555151;
+  outline-offset: 3px;
+  outline: 1px solid #555151;
+  transition: all 0.3s;
+  position: relative;
+}
+.bar-ul a:hover, .bar-ul a:focus {
+  background-color: #1e1e1e;
+}
+.bar-ul a:hover span, .bar-ul a:focus span {
+  display: block;
+}
+.bar-ul span {
+  display: block;
+  position: absolute;
+  background-color: #f6f6f6;
+  color: #1e1e1e;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 107%);
+  display: none;
+  z-index: 100;
+  border: 1px solid #4d0b0b;
+  border-radius: 3px;
+  width: 100%;
 }
 
 .wrapper::-webkit-scrollbar-thumb {
@@ -241,46 +229,34 @@
   h1 {
     font-size: 24px;
   }
-
   .img {
     height: 40px;
     width: 40px;
   }
-
   .burger {
     padding: 20px;
   }
-
-  .line {
-    &::after {
-      top: -5px;
-    }
-
-    &::before {
-      top: 5px;
-    }
+  .line::after {
+    top: -5px;
   }
-
-  .rotate-line {
-    &::after {
-      background-color: white;
-      transform: rotate(135deg);
-      top: 50%;
-    }
-
-    &::before {
-      background-color: white;
-      transform: rotate(-135deg);
-      top: 50%;
-    }
+  .line::before {
+    top: 5px;
   }
-
+  .rotate-line::after {
+    background-color: white;
+    transform: rotate(135deg);
+    top: 50%;
+  }
+  .rotate-line::before {
+    background-color: white;
+    transform: rotate(-135deg);
+    top: 50%;
+  }
   .project-wrapper {
     height: 280px;
     width: 280px;
   }
 }
-
 @media (max-width: 600px) {
   h1 {
     font-size: 20px;
